@@ -9,7 +9,7 @@
 ##  - First 70000 lines of the file cover the time window of 02/01/2007 and 02/02/2007
 ##  - Acceptable to save plot file to the working directory
 plot4 <- function(){
-  ## Read data
+  ## Read only 70000 lines of data from file
   filename <- "household_power_consumption.txt"
   linestoread <- 70000
   
@@ -43,7 +43,7 @@ plot4 <- function(){
   lines(powersubset$fmtDateTime, powersubset$Sub_metering_1, type = "l")
   lines(powersubset$fmtDateTime, powersubset$Sub_metering_2, type = "l", col = c("red"))
   lines(powersubset$fmtDateTime, powersubset$Sub_metering_3, type = "l", col = c("blue"))
-  legend("topright", col = c("black","red","blue"), pt.cex = 1, cex = 0.75, lwd = c(2,2,2),
+  legend("topright", col = c("black","red","blue"), pt.cex = 1, cex = 0.75, lwd = c(1,1,1),
          legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
   
   plot(powersubset$fmtDateTime, powersubset$Global_reactive_power, type = "l",
