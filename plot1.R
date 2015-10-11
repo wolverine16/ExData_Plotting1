@@ -1,3 +1,10 @@
+## Function plot1 generates a histogram for Global active powers
+## from 02/01/2007 and 02/02/2007
+##
+##  Assumptions - 
+##  - The file household_power_consumption.txt stores the data and in the working directory
+##  - First 70000 lines of the file cover the time window of 02/01/2007 and 02/02/2007
+##  - Acceptable to save plot file to the working directory
 plot1 <- function(){
   ## Read data
   filename <- "household_power_consumption.txt"
@@ -17,7 +24,7 @@ plot1 <- function(){
   ## Create subset from 2007-02-01 and 2007-02-02
   powersubset <- powerdata[((powerdata$fmtDateTime > "2007-01-31 23:59:00")&(powerdata$fmtDateTime < "2007-02-03 00:00:00")),]
   
-  ## Create histogram and write to file
+  ## Create png file and write histogram to it
   histplotfile <- "plot1.png"
   
   png(filename = histplotfile, width = 480, height = 480, units = "px", pointsize = 12)
