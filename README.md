@@ -17,6 +17,9 @@ The R Scripts use the dataset mentioned under the assignment details section bel
 dataset since only data from 2007-02-01 and 2007-02-02 is needed for the graphs. Each R script has a function that generates a graph written
 to a png file. Each function file has details on the type of graph it generates and the assumptions made by the functions.
 
+The R Scripts assume that the file with the dataset - household_power_consumption.txt - is in the working directory. The scripts can be sourced
+and run in RStudio. They will generate a plot png file in the working directory with same name as the function.
+
 ## Assignment Details
 
 This assignment uses data from
